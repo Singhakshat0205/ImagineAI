@@ -19,7 +19,7 @@ router.route('/').post(async (req, res)=>{
         'Content-Type': 'application/json',
         'X-Api-Version': 'v1',
         Accept: 'application/json',
-        Authorization: 'Bearer lmwr_sk_rcqpyNmBil_Hg63g9ySZDVeXXLsqjEpxkcGPMF2zaSNweehv'
+        Authorization: 'Bearer lmwr_sk_UOdy76h1oL_kNAQUcss5f5YioeY6z3JIJoWKNZMGgBFlAoiL'
       },
       
       body: JSON.stringify({
