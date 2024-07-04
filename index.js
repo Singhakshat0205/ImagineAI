@@ -13,7 +13,7 @@ app.use(express.json({limit:'50mb'}));
 app.use('/api/v1/post', postRoutes);
 app.use('/api/v1/dalle', dalleRoutes);
 
-app.get("/", async( req, res)=>{
+app.get("/imagine-ai-frontend-akwxxc8eg-akshat-singhs-projects-5fe4f296.vercel.app", async( req, res)=>{
 
      res.send("hello from dalle")
 })
