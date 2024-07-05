@@ -18,6 +18,7 @@
         "Access-Control-Allow-Origin": "*"
       }
     },
+
     {
       "src": "/api/v1/dalle",
       "dest": "index.js",
