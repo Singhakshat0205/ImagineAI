@@ -51,13 +51,7 @@
         "Access-Control-Allow-Origin": "*"
       }
     }
-  ],
-  "functions": {
-    "api/v1/post": {
-      "maxDuration": 10
-    },
-    "api/v1/dalle": {
-      "maxDuration": 10
-    }
-  }
+  ]
+
+
 }
