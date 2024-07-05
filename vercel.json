@@ -24,14 +24,6 @@
 
       },
       {
-        "src":"/app/v1/create-post",
-        "dest":"dist/index.html",
-        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-        "headers": {
-          "Access-Control-Allow-Origin": "*"
-        }
-      },
-      {
         "src":"/api/v1/dalle",
         "dest":"dist/index.html",
         "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
@@ -40,8 +32,16 @@
         }
       },
       {
+        "src":"/api/v1/dalle",
+        "dest":"index.html",
+        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+        "headers": {
+          "Access-Control-Allow-Origin": "*"
+        }
+      },
+      {
        
-        "src": "//api/v1/post/(.*)",       
+        "src": "/api/v1/post/(.*)",       
         "dest": "index.js",
         "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         "headers": {
