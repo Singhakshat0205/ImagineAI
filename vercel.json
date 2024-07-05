@@ -2,22 +2,21 @@
  
     "builds": [
       {
-        "src": "api/v1/post/index.js",
-      "use": "@vercel/node"
+        "src": "index.js",
+        "use": "@vercel/node"
       },
       {
-         "src": "api/v1/dalle/index.js",
-      "use": "@vercel/node"
+        "src": "dist/**",
+        "use": "@vercel/static"
       }
     ],
 
 
     "routes": [
-      
       {
        
-      "src": "/api/v1/post",
-      "dest": "/api/v1/post/index.js",
+        "src": "/api/v1/post",       
+        "dest": "index.js",
         "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         "headers": {
           "Access-Control-Allow-Origin": "*"
@@ -25,14 +24,39 @@
 
       },
       {
-      "src": "/api/v1/dalle",
-      "dest": "/api/v1/dalle/index.js",
+        "src":"/",
+        "dest":"dist/index.html",
+        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+        "headers": {
+          "Access-Control-Allow-Origin": "*"
+        }
+      },
+      {
+        "src":"/api/v1/dalle",
+        "dest":"dist/index.html",
+        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+        "headers": {
+          "Access-Control-Allow-Origin": "*"
+        }
+      },
+      {
+       
+        "src": "//api/v1/post/(.*)",       
+        "dest": "index.js",
+        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+        "headers": {
+          "Access-Control-Allow-Origin": "*"
+        }
+      },
+      {
+       
+        "src": "/(.+)",       
+        "dest": "dist/$1",
         "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         "headers": {
           "Access-Control-Allow-Origin": "*"
         }
       }
-     
     ]
   
    
