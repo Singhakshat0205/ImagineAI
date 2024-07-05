@@ -1,7 +1,7 @@
 {
   "routes": [
-    { "src": "/", "dest": "/api/v1/post" },
-    { "src": "/create-post", "dest": "/api/v1/dalle" }
+    { "src": "/api/v1/post", "dest": "/" },
+    { "src": "/api/v1/dalle", "dest": "/create-post" }
     
   ]
 }
