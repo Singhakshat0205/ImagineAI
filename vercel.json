@@ -2,10 +2,7 @@
   "builds": [
     {
       "src": "index.js",
-      "use": "@vercel/node",
-      "config": {
-        "maxDuration": 10
-      }
+      "use": "@vercel/node"
     },
     {
       "src": "dist/**",
@@ -19,8 +16,7 @@
       "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
       "headers": {
         "Access-Control-Allow-Origin": "*"
-      },
-      "maxDuration": 10
+      }
     },
     {
       "src": "/api/v1/dalle",
@@ -28,8 +24,7 @@
       "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
       "headers": {
         "Access-Control-Allow-Origin": "*"
-      },
-      "maxDuration": 10
+      }
     },
     {
       "src": "/",
@@ -45,8 +40,7 @@
       "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
       "headers": {
         "Access-Control-Allow-Origin": "*"
-      },
-      "maxDuration": 10
+      }
     },
     {
       "src": "/(.+)",
@@ -56,5 +50,13 @@
         "Access-Control-Allow-Origin": "*"
       }
     }
-  ]
+  ],
+  "functions": {
+    "api/v1/post": {
+      "maxDuration": 10
+    },
+    "api/v1/dalle": {
+      "maxDuration": 10
+    }
+  }
 }
