@@ -24,7 +24,7 @@
 
       },
       {
-        "src":"/",
+        "src":"/app/v1/create-post",
         "dest":"dist/index.html",
         "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         "headers": {
