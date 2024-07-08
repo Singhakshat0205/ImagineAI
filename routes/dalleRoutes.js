@@ -30,9 +30,9 @@ router.route('/').post(async (req, res)=>{
     }
   );
 
-  const data= await resp.json();
+//  const data= await resp.json();
    
-   res.status(200).json(data);
+   res.status(200).json(resp);
 
 })
 
